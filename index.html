@@ -107,31 +107,25 @@
         <svg class="hand-line" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 60 2, 140 10, 220 5 S 280 2, 298 7" /></svg>
       </h2>
 
+      <!-- Instagram reel embeds. Add more <blockquote class="instagram-media">
+           blocks here as you post new clips — embed.js (loaded at the
+           bottom of the page) auto-processes every one on the page. -->
       <div class="videos-grid">
-        <!-- TODO: replace data-video with real YouTube IDs -->
-        <button class="video-thumb" type="button" data-video="TODO_VIDEO_ID_1" aria-haspopup="dialog">
-          <img src="https://img.youtube.com/vi/TODO_VIDEO_ID_1/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="play-btn" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" /></svg>
-          </span>
-          <span class="video-caption">PARK SESH</span>
-        </button>
-
-        <button class="video-thumb" type="button" data-video="TODO_VIDEO_ID_2" aria-haspopup="dialog">
-          <img src="https://img.youtube.com/vi/TODO_VIDEO_ID_2/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="play-btn" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" /></svg>
-          </span>
-          <span class="video-caption">SUNSET CRUISE</span>
-        </button>
-
-        <button class="video-thumb" type="button" data-video="TODO_VIDEO_ID_3" aria-haspopup="dialog">
-          <img src="https://img.youtube.com/vi/TODO_VIDEO_ID_3/hqdefault.jpg" alt="" loading="lazy" />
-          <span class="play-btn" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" /></svg>
-          </span>
-          <span class="video-caption">STREET LINES</span>
-        </button>
+        <blockquote
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/reel/DbrDPGgyn2e/?utm_source=ig_embed&amp;utm_campaign=loading"
+          data-instgrm-version="14"
+          style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px auto; max-width:400px; min-width:280px; padding:0; width:calc(100% - 2px);"
+        >
+          <div style="padding:16px;">
+            <a
+              href="https://www.instagram.com/reel/DbrDPGgyn2e/?utm_source=ig_embed&amp;utm_campaign=loading"
+              style="background:#FFFFFF; line-height:0; padding:0; text-align:center; text-decoration:none; width:100%; display:block;"
+              target="_blank"
+              rel="noopener noreferrer"
+            >View this reel on Instagram</a>
+          </div>
+        </blockquote>
       </div>
     </div>
 
@@ -329,22 +323,7 @@
   <p class="footer-copyright">© 2026 KIH SKATEBOARDING</p>
 </footer>
 
-<!-- ============================================================
-     LIGHTBOX
-============================================================ -->
-<div id="lightbox" class="lightbox" hidden>
-  <div class="lightbox-inner">
-    <button class="lightbox-close" type="button" aria-label="Close video">
-      <svg viewBox="0 0 24 24"><path d="M4 4 L20 20 M20 4 L4 20" /></svg>
-    </button>
-    <div class="lightbox-video-wrap">
-      <iframe id="lightbox-iframe" src="" title="KIH Skateboarding video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-
 <script src="script.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
