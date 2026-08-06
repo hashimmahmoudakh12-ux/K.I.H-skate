@@ -9,7 +9,7 @@ Plain HTML/CSS/JS. No frameworks, no build step.
 
 - `index.html` — page markup
 - `styles.css` — all styling (palette lives in CSS variables at the top)
-- `script.js` — smooth-scroll nav, scroll-spy
+- `script.js` — smooth-scroll nav, scroll-spy, booking form (mailto)
 - `kih-logo.png` — circular sticker logo
 - `kih-mascot.png` — transparent mascot
 - `khyree.jpg`, `ismael.jpg`, `hashim.jpg` — real instructor photos
@@ -41,13 +41,16 @@ to add in Vercel, and which Stripe objects to create. Short version:
 
 ## Before you ship
 
-- The booking form emails submissions to **kihskateboarding@gmail.com** via
-  [FormSubmit](https://formsubmit.co) — no account needed. **The first real
-  submission triggers a one-time confirmation email to that inbox; someone
-  needs to open it and click "Confirm" before bookings start arriving.**
-  After that, every submission is delivered automatically. To send bookings
-  to a different address instead, change the email in the form's `action`
-  attribute in `index.html`.
+- The booking form has no third-party service in the loop — submitting
+  builds a `mailto:` link from the filled-in fields and hands it to the
+  browser, which opens the visitor's own email app addressed to
+  **kihskateboarding@gmail.com** with everything pre-filled. Zero setup, no
+  confirmation-email gate, but it only works if the visitor has a mail app
+  configured on whatever device they're on, and they still have to hit
+  send themselves — a booking site with a lot of visitors on browser-only
+  webmail (no configured mail app) may want a real form backend instead.
+  To send bookings to a different address, change `BOOKING_EMAIL` near the
+  top of the booking form's handler in `script.js`.
 - The "Latest Videos" card embeds a real Instagram reel via Instagram's
   official embed (`embed.js`). To add more clips, copy the
   `<blockquote class="instagram-media" ...>` block in `index.html` and swap

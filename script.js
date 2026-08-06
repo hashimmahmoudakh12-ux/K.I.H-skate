@@ -58,66 +58,55 @@
     sections.forEach(function (section) { spy.observe(section); });
   }
 
-  /* ---------------- booking form (FormSubmit via fetch) ----------------
-     Submits with fetch instead of a plain POST so we can show a real
-     success/error state in place, instead of redirecting to FormSubmit's
-     own page. If this is the very first submission ever sent to the
-     target inbox, FormSubmit holds it and emails a one-time confirmation
-     link to that inbox instead of delivering it — that's expected
-     first-run behavior, not a bug, so the error message below calls it
-     out directly rather than leaving the visitor guessing. */
+  /* ---------------- booking form (mailto, no third-party service) ----
+     No form-processing service in the loop — submitting builds a mailto:
+     link from the filled-in fields and hands it to the browser, which
+     opens the visitor's own email app addressed straight to
+     kihskateboarding@gmail.com with everything pre-filled. That means
+     zero setup and no confirmation-email gate, but it only works if the
+     visitor has a mail app configured on whatever device they're on, and
+     they still have to hit send themselves — we can't detect or
+     guarantee that part, so the confirmation copy says "should be open"
+     rather than claiming the message is already sent. */
 
-  var bookingForm = document.querySelector(".notebook-form");
+  var BOOKING_EMAIL = "kihskateboarding@gmail.com";
+  var bookingForm = document.getElementById("book-form");
 
   if (bookingForm) {
     var fields = bookingForm.querySelector(".form-fields");
     var success = bookingForm.querySelector(".form-success");
-    var status = bookingForm.querySelector(".form-status");
-    var submitBtn = bookingForm.querySelector(".submit-btn");
-    var ajaxAction = bookingForm.action.replace(
-      "formsubmit.co/",
-      "formsubmit.co/ajax/"
-    );
 
     bookingForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      var data = {};
-      new FormData(bookingForm).forEach(function (value, key) {
-        data[key] = value;
-      });
+      var data = new FormData(bookingForm);
+      var name = data.get("name") || "";
+      var email = data.get("email") || "";
+      var want = data.get("want") || "";
+      var date = data.get("date") || "";
+      var message = data.get("message") || "";
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = "SENDING...";
-      status.hidden = true;
+      var subject = "Booking request from " + name;
+      var bodyLines = [
+        "Name: " + name,
+        "Email: " + email,
+        "Looking for: " + want,
+      ];
+      if (date) bodyLines.push("Date preference: " + date);
+      bodyLines.push("", "Message:", message);
 
-      fetch(ajaxAction, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then(function (res) {
-          if (!res.ok) throw new Error("Request failed: " + res.status);
-          fields.hidden = true;
-          success.hidden = false;
-        })
-        .catch(function () {
-          status.hidden = false;
-          status.textContent =
-            "Something went wrong sending that. If this is the very " +
-            "first booking request since setup, check " +
-            "kihskateboarding@gmail.com (and spam) for a one-time " +
-            "confirmation email from FormSubmit, click Confirm, then " +
-            "try again.";
-        })
-        .finally(function () {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML =
-            'SEND IT<svg class="arrow-svg" viewBox="0 0 30 20" aria-hidden="true"><path d="M1 10 H27 M18 2 L27 10 L18 18" /></svg>';
-        });
+      var mailto =
+        "mailto:" +
+        BOOKING_EMAIL +
+        "?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(bodyLines.join("\n"));
+
+      window.location.href = mailto;
+
+      fields.hidden = true;
+      success.hidden = false;
     });
   }
 })();
