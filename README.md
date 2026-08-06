@@ -16,8 +16,13 @@ Plain HTML/CSS/JS. No frameworks, no build step.
 
 ## Before you ship
 
-- Replace `YOUR_ID` in the booking form's `action` URL in `index.html` with
-  your real [Formspree](https://formspree.io) form ID.
+- The booking form emails submissions to **kihskateboarding@gmail.com** via
+  [FormSubmit](https://formsubmit.co) — no account needed. **The first real
+  submission triggers a one-time confirmation email to that inbox; someone
+  needs to open it and click "Confirm" before bookings start arriving.**
+  After that, every submission is delivered automatically. To send bookings
+  to a different address instead, change the email in the form's `action`
+  attribute in `index.html`.
 - The "Latest Videos" card embeds a real Instagram reel via Instagram's
   official embed (`embed.js`). To add more clips, copy the
   `<blockquote class="instagram-media" ...>` block in `index.html` and swap

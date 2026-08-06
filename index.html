@@ -242,8 +242,15 @@
       <h2 class="section-heading light">BOOK ME.</h2>
       <p class="book-subheading">Lessons, sessions, appearances, collabs. Fill this out and I'll hit you back.</p>
 
-      <!-- TODO: replace YOUR_ID with your real Formspree form ID -->
-      <form class="notebook-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+      <!-- Booking requests are emailed to kihskateboarding@gmail.com via
+           FormSubmit (no account needed). The FIRST real submission
+           triggers a one-time confirmation email to that inbox — someone
+           has to click "Confirm" there before submissions start arriving,
+           it's FormSubmit's spam-prevention step, not a bug. -->
+      <form class="notebook-form" action="https://formsubmit.co/kihskateboarding@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New KIH Skateboarding booking request" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
         <svg class="torn-edge" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0 24 L0 10 L20 18 L40 4 L62 16 L86 2 L110 14 L136 6 L160 18 L184 4 L208 16 L232 2 L256 14 L280 6 L304 18 L328 4 L352 16 L376 2 L400 14 L424 6 L448 18 L472 4 L496 16 L520 2 L544 14 L568 6 L592 18 L600 12 L600 24 Z" />
         </svg>
