@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KIH Skateboarding — Good Times. Bad Tricks.</title>
+<meta name="description" content="KIH Skateboarding — a personal skate brand and instructor site. Beginner lessons, intermediate coaching, and private sessions with Khyree. Good times. Bad tricks. Skate everything." />
+<meta property="og:title" content="KIH Skateboarding" />
+<meta property="og:description" content="Good times. Bad tricks. Skate everything. Lessons, coaching, and private sessions with Khyree." />
+<meta property="og:image" content="kih-logo.png" />
+<meta property="og:type" content="website" />
+<link rel="icon" href="kih-logo.png" type="image/png" />
+<link rel="apple-touch-icon" href="kih-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+============================================================ -->
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" aria-label="KIH Skateboarding home">
+      <img src="kih-logo.png" alt="KIH Skateboarding logo" width="90" height="90" />
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#home" class="nav-link" data-nav="home">HOME
+        <svg class="underline-svg" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 20 4, 35 12, 50 7 S 80 3, 98 8" /></svg>
+      </a>
+      <!-- TODO: build a real shop page — points at the booking form for now -->
+      <a href="#book" class="nav-link" data-nav="shop">SHOP
+        <svg class="underline-svg" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 20 4, 35 12, 50 7 S 80 3, 98 8" /></svg>
+      </a>
+      <a href="#videos" class="nav-link" data-nav="videos">VIDEOS
+        <svg class="underline-svg" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 20 4, 35 12, 50 7 S 80 3, 98 8" /></svg>
+      </a>
+      <a href="#about" class="nav-link" data-nav="about">ABOUT
+        <svg class="underline-svg" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 20 4, 35 12, 50 7 S 80 3, 98 8" /></svg>
+      </a>
+      <a href="#book" class="nav-link" data-nav="contact">CONTACT
+        <svg class="underline-svg" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 20 4, 35 12, 50 7 S 80 3, 98 8" /></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          <span class="hero-title-line1">KIH</span>
+          <span class="hero-title-line2">
+            SKATEBOARDING
+            <svg class="scribble-underline" viewBox="0 0 420 30" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M4 18 C 60 6, 110 26, 170 14 S 260 4, 320 16 S 390 22, 416 10" />
+            </svg>
+          </span>
+        </h1>
+        <p class="hero-tagline">GOOD TIMES. BAD TRICKS.<br />SKATE EVERYTHING.</p>
+        <a href="#book" class="btn btn-gold hero-btn">
+          BOOK NOW
+          <svg class="arrow-svg" viewBox="0 0 30 20" aria-hidden="true"><path d="M1 10 H27 M18 2 L27 10 L18 18" /></svg>
+        </a>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg class="gold-splatter" viewBox="0 0 600 600">
+          <defs>
+            <filter id="splatFilterHero" x="-50%" y="-50%" width="200%" height="200%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="7" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="70" />
+            </filter>
+          </defs>
+          <g fill="#E5B12E" filter="url(#splatFilterHero)">
+            <circle cx="320" cy="300" r="230" />
+            <circle cx="90" cy="150" r="30" />
+            <circle cx="120" cy="480" r="22" />
+            <circle cx="540" cy="440" r="26" />
+            <circle cx="70" cy="360" r="16" />
+            <circle cx="500" cy="150" r="18" />
+          </g>
+        </svg>
+        <img src="kih-mascot.png" alt="KIH mascot skating down the road" class="mascot" />
+      </div>
+    </div>
+
+    <div class="road" aria-hidden="true">
+      <div class="road-lane"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LATEST VIDEOS + SPLATTER BLOB
+  ============================================================ -->
+  <section id="videos" class="videos-section">
+    <div class="videos-card">
+      <h2 class="videos-heading">
+        LATEST VIDEOS
+        <svg class="hand-line" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 6 C 60 2, 140 10, 220 5 S 280 2, 298 7" /></svg>
+      </h2>
+
+      <div class="videos-grid">
+        <!-- TODO: replace data-video with real YouTube IDs -->
+        <button class="video-thumb" type="button" data-video="TODO_VIDEO_ID_1" aria-haspopup="dialog">
+          <img src="https://img.youtube.com/vi/TODO_VIDEO_ID_1/hqdefault.jpg" alt="" loading="lazy" />
+          <span class="play-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" /></svg>
+          </span>
+          <span class="video-caption">PARK SESH</span>
+        </button>
+
+        <button class="video-thumb" type="button" data-video="TODO_VIDEO_ID_2" aria-haspopup="dialog">
+          <img src="https://img.youtube.com/vi/TODO_VIDEO_ID_2/hqdefault.jpg" alt="" loading="lazy" />
+          <span class="play-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" /></svg>
+          </span>
+          <span class="video-caption">SUNSET CRUISE</span>
+        </button>
+
+        <button class="video-thumb" type="button" data-video="TODO_VIDEO_ID_3" aria-haspopup="dialog">
+          <img src="https://img.youtube.com/vi/TODO_VIDEO_ID_3/hqdefault.jpg" alt="" loading="lazy" />
+          <span class="play-btn" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" /></svg>
+          </span>
+          <span class="video-caption">STREET LINES</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="splatter-blob" aria-hidden="false">
+      <svg class="black-splatter" viewBox="0 0 320 320">
+        <defs>
+          <filter id="splatFilterBlob" x="-50%" y="-50%" width="200%" height="200%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="14" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="46" />
+          </filter>
+        </defs>
+        <g fill="#0A0A0A" filter="url(#splatFilterBlob)">
+          <circle cx="160" cy="160" r="130" />
+          <circle cx="50" cy="90" r="18" />
+          <circle cx="270" cy="230" r="14" />
+        </g>
+      </svg>
+      <p class="splatter-text">SKATE<br />YOUR<br />OWN WAY.</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INSTRUCTOR
+  ============================================================ -->
+  <section id="about" class="instructor">
+    <h2 class="section-heading">
+      SKATE WITH KHYREE
+      <svg class="scribble-underline small" viewBox="0 0 320 24" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M4 14 C 50 5, 90 20, 140 11 S 220 3, 280 13 S 310 17, 316 9" />
+      </svg>
+    </h2>
+
+    <div class="instructor-grid">
+      <div class="polaroid">
+        <svg class="tape tape-left" viewBox="0 0 90 40" aria-hidden="true"><rect x="2" y="2" width="86" height="36" /></svg>
+        <svg class="tape tape-right" viewBox="0 0 90 40" aria-hidden="true"><rect x="2" y="2" width="86" height="36" /></svg>
+        <img src="me.jpg" alt="Khyree, KIH Skateboarding instructor" />
+        <p class="polaroid-caption">KHYREE</p>
+      </div>
+
+      <div class="instructor-copy">
+        <p class="bio">
+          I've been skating since I could reach the pedals on my bike — traded it for four wheels
+          and never looked back. These days I split my time between filming clips, chasing new
+          spots, and teaching kids (and plenty of adults) how to fall the right way before they
+          learn how to land it. No egos, no gatekeeping — just good times and bad tricks.
+        </p>
+
+        <div class="offer-cards">
+          <div class="offer-card card-cream">
+            <h3>BEGINNER LESSONS</h3>
+            <p>First ollies, pushing, confidence.</p>
+          </div>
+          <div class="offer-card card-teal">
+            <h3>INTERMEDIATE COACHING</h3>
+            <p>Tricks, transitions, park lines.</p>
+          </div>
+          <div class="offer-card card-cream">
+            <h3>PRIVATE SESSIONS</h3>
+            <p>One-on-one, filmed for your socials.</p>
+          </div>
+        </div>
+
+        <a href="#book" class="btn btn-gold">
+          BOOK A LESSON
+          <svg class="arrow-svg" viewBox="0 0 30 20" aria-hidden="true"><path d="M1 10 H27 M18 2 L27 10 L18 18" /></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOOK
+  ============================================================ -->
+  <section id="book" class="book-section">
+    <svg class="gold-splatter book-splatter" viewBox="0 0 600 600" aria-hidden="true">
+      <defs>
+        <filter id="splatFilterBook" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="21" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="70" />
+        </filter>
+      </defs>
+      <g fill="#E5B12E" filter="url(#splatFilterBook)">
+        <circle cx="300" cy="300" r="240" />
+        <circle cx="80" cy="480" r="24" />
+        <circle cx="520" cy="120" r="20" />
+      </g>
+    </svg>
+
+    <div class="book-content">
+      <h2 class="section-heading light">BOOK ME.</h2>
+      <p class="book-subheading">Lessons, sessions, appearances, collabs. Fill this out and I'll hit you back.</p>
+
+      <!-- TODO: replace YOUR_ID with your real Formspree form ID -->
+      <form class="notebook-form" action="https://formspree.io/f/YOUR_ID" method="POST">
+        <svg class="torn-edge" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 24 L0 10 L20 18 L40 4 L62 16 L86 2 L110 14 L136 6 L160 18 L184 4 L208 16 L232 2 L256 14 L280 6 L304 18 L328 4 L352 16 L376 2 L400 14 L424 6 L448 18 L472 4 L496 16 L520 2 L544 14 L568 6 L592 18 L600 12 L600 24 Z" />
+        </svg>
+
+        <div class="form-row">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" required autocomplete="name" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required autocomplete="email" />
+        </div>
+
+        <div class="form-row">
+          <label for="want">WHAT YOU WANT</label>
+          <select id="want" name="want" required>
+            <option value="" disabled selected>Choose one...</option>
+            <option value="Beginner Lesson">Beginner Lesson</option>
+            <option value="Intermediate Coaching">Intermediate Coaching</option>
+            <option value="Private Session">Private Session</option>
+            <option value="Appearance">Appearance</option>
+            <option value="Collab">Collab</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="date">DATE PREFERENCE <span class="optional">(optional)</span></label>
+          <input type="date" id="date" name="date" />
+        </div>
+
+        <div class="form-row">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold submit-btn">
+          SEND IT
+          <svg class="arrow-svg" viewBox="0 0 30 20" aria-hidden="true"><path d="M1 10 H27 M18 2 L27 10 L18 18" /></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a href="#" class="social-circle" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4.2" /><circle cx="17.2" cy="6.8" r="1.1" fill="#0A0A0A" stroke="none" /></svg>
+      </a>
+      <a href="#" class="social-circle" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5.5" width="20" height="13" rx="4" /><path d="M10 9 L15.5 12 L10 15 Z" fill="#0A0A0A" stroke="none" /></svg>
+      </a>
+      <a href="#" class="social-circle" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path d="M13 3 v11.2 a3.4 3.4 0 1 1 -2.4 -3.26 V8.6 a5.6 5.6 0 1 0 4.9 5.56 V9.8 a7 7 0 0 0 4.1 1.32 V8 a4.2 4.2 0 0 1 -3.4 -2.1 A4.3 4.3 0 0 1 15.6 3 Z" /></svg>
+      </a>
+    </div>
+
+    <p class="footer-tagline">BUILT FOR GOOD TIMES &amp; BAD TRICKS</p>
+
+    <svg class="footer-skateboard" viewBox="0 0 120 60" aria-hidden="true">
+      <rect x="20" y="26" width="70" height="10" rx="5" />
+      <circle cx="34" cy="40" r="5" />
+      <circle cx="76" cy="40" r="5" />
+      <path class="motion-line" d="M2 20 H14" />
+      <path class="motion-line" d="M2 30 H10" />
+      <path class="motion-line" d="M2 40 H14" />
+    </svg>
+  </div>
+
+  <p class="footer-copyright">© 2026 KIH SKATEBOARDING</p>
+</footer>
+
+<!-- ============================================================
+     LIGHTBOX
+============================================================ -->
+<div id="lightbox" class="lightbox" hidden>
+  <div class="lightbox-inner">
+    <button class="lightbox-close" type="button" aria-label="Close video">
+      <svg viewBox="0 0 24 24"><path d="M4 4 L20 20 M20 4 L4 20" /></svg>
+    </button>
+    <div class="lightbox-video-wrap">
+      <iframe id="lightbox-iframe" src="" title="KIH Skateboarding video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
