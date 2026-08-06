@@ -480,13 +480,17 @@ h1, h2, h3 {
   margin: 0 auto 40px;
 }
 
-.instructor-grid {
-  max-width: 1200px;
+.team-grid {
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 48px;
+  gap: 56px;
   align-items: start;
+}
+
+.team-member {
+  text-align: center;
 }
 
 .polaroid {
@@ -495,10 +499,18 @@ h1, h2, h3 {
   border: var(--border-thin) solid var(--black);
   border-radius: 4px;
   padding: 16px 16px 56px;
-  max-width: 320px;
+  max-width: 280px;
   margin: 0 auto;
   transform: rotate(-3deg);
   box-shadow: var(--shadow-flat);
+}
+
+.polaroid-2 {
+  transform: rotate(2.5deg);
+}
+
+.polaroid-3 {
+  transform: rotate(-1.5deg);
 }
 
 .polaroid img {
@@ -542,18 +554,26 @@ h1, h2, h3 {
   transform: rotate(32deg);
 }
 
-.instructor-copy .bio {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  max-width: 60ch;
-  margin: 0 0 28px;
+.member-bio {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 30ch;
+  margin: 18px auto 0;
 }
 
 .offer-cards {
+  max-width: 1100px;
+  margin: 56px auto 32px;
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin-bottom: 32px;
+}
+
+.instructor-cta {
+  display: flex;
+  max-width: 320px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .offer-card {
@@ -861,6 +881,19 @@ h1, h2, h3 {
   .videos-section {
     padding-bottom: 140px;
   }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .offer-cards {
+    flex-direction: row;
+  }
+
+  .offer-card {
+    flex: 1;
+  }
 }
 
 @media (min-width: 860px) {
@@ -880,23 +913,6 @@ h1, h2, h3 {
   .hero-art {
     width: 45%;
     max-width: none;
-  }
-
-  .instructor-grid {
-    grid-template-columns: 0.85fr 1.15fr;
-    gap: 60px;
-  }
-
-  .polaroid {
-    margin: 0;
-  }
-
-  .offer-cards {
-    flex-direction: row;
-  }
-
-  .offer-card {
-    flex: 1;
   }
 
   .book-content {

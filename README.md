@@ -12,7 +12,7 @@ Plain HTML/CSS/JS. No frameworks, no build step.
 - `script.js` — video lightbox, smooth-scroll nav, scroll-spy
 - `kih-logo.png` — circular sticker logo
 - `kih-mascot.png` — transparent mascot
-- `me.jpg` — instructor photo (placeholder — swap in a real one any time)
+- `khyree.jpg`, `ismael.jpg`, `hashim.jpg` — instructor photos (placeholders — swap in real ones any time)
 
 ## Before you ship
 
@@ -20,8 +20,8 @@ Plain HTML/CSS/JS. No frameworks, no build step.
   real YouTube video IDs.
 - Replace `YOUR_ID` in the booking form's `action` URL in `index.html` with
   your real [Formspree](https://formspree.io) form ID.
-- Swap `me.jpg` for a real photo whenever you have one — same filename,
-  same aspect ratio (4:5) works best.
+- Swap `khyree.jpg` / `ismael.jpg` / `hashim.jpg` for real photos whenever
+  you have them — same filenames, same aspect ratio (4:5) works best.
 
 ## Run locally
 
