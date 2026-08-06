@@ -246,8 +246,10 @@
            FormSubmit (no account needed). The FIRST real submission
            triggers a one-time confirmation email to that inbox — someone
            has to click "Confirm" there before submissions start arriving,
-           it's FormSubmit's spam-prevention step, not a bug. -->
-      <form class="notebook-form" action="https://formsubmit.co/kihskateboarding@gmail.com" method="POST">
+           it's FormSubmit's spam-prevention step, not a bug. script.js
+           submits this via fetch so we can show a real success/error
+           state instead of redirecting to FormSubmit's own page. -->
+      <form class="notebook-form" action="https://formsubmit.co/kihskateboarding@gmail.com" method="POST" novalidate>
         <input type="hidden" name="_subject" value="New KIH Skateboarding booking request" />
         <input type="hidden" name="_template" value="table" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
@@ -255,43 +257,52 @@
           <path d="M0 24 L0 10 L20 18 L40 4 L62 16 L86 2 L110 14 L136 6 L160 18 L184 4 L208 16 L232 2 L256 14 L280 6 L304 18 L328 4 L352 16 L376 2 L400 14 L424 6 L448 18 L472 4 L496 16 L520 2 L544 14 L568 6 L592 18 L600 12 L600 24 Z" />
         </svg>
 
-        <div class="form-row">
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name" required autocomplete="name" />
+        <div class="form-fields">
+          <div class="form-row">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+          </div>
+
+          <div class="form-row">
+            <label for="want">WHAT YOU WANT</label>
+            <select id="want" name="want" required>
+              <option value="" disabled selected>Choose one...</option>
+              <option value="Beginner Lesson">Beginner Lesson</option>
+              <option value="Intermediate Coaching">Intermediate Coaching</option>
+              <option value="Private Session">Private Session</option>
+              <option value="Appearance">Appearance</option>
+              <option value="Collab">Collab</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="date">DATE PREFERENCE <span class="optional">(optional)</span></label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <div class="form-row">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold submit-btn">
+            SEND IT
+            <svg class="arrow-svg" viewBox="0 0 30 20" aria-hidden="true"><path d="M1 10 H27 M18 2 L27 10 L18 18" /></svg>
+          </button>
+
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
         </div>
 
-        <div class="form-row">
-          <label for="email">EMAIL</label>
-          <input type="email" id="email" name="email" required autocomplete="email" />
+        <div class="form-success" hidden>
+          <p class="form-success-heading">SENT IT!</p>
+          <p>We'll hit you back soon.</p>
         </div>
-
-        <div class="form-row">
-          <label for="want">WHAT YOU WANT</label>
-          <select id="want" name="want" required>
-            <option value="" disabled selected>Choose one...</option>
-            <option value="Beginner Lesson">Beginner Lesson</option>
-            <option value="Intermediate Coaching">Intermediate Coaching</option>
-            <option value="Private Session">Private Session</option>
-            <option value="Appearance">Appearance</option>
-            <option value="Collab">Collab</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <label for="date">DATE PREFERENCE <span class="optional">(optional)</span></label>
-          <input type="date" id="date" name="date" />
-        </div>
-
-        <div class="form-row">
-          <label for="message">MESSAGE</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-gold submit-btn">
-          SEND IT
-          <svg class="arrow-svg" viewBox="0 0 30 20" aria-hidden="true"><path d="M1 10 H27 M18 2 L27 10 L18 18" /></svg>
-        </button>
       </form>
     </div>
   </section>
