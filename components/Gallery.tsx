@@ -11,11 +11,11 @@ const GALLERY_ITEMS = [
   { art: "carve", variant: "ember", label: "Street Session", span: "row-span-2" },
   { art: "ollie", variant: "dusk", label: "First Ollie", span: "" },
   { art: "ramp", variant: "deep", label: "Mini Ramp", span: "" },
-  { art: "wheels", variant: "cream", label: "Gear Check", span: "row-span-2" },
-  { art: "grind", variant: "dusk", label: "Ledge Work", span: "" },
+  { art: "wheels", variant: "teal", label: "Gear Check", span: "row-span-2" },
+  { art: "grind", variant: "teal", label: "Ledge Work", span: "" },
   { art: "flip", variant: "ember", label: "Flip Tricks", span: "" },
   { art: "carve", variant: "deep", label: "Group Lesson", span: "" },
-  { art: "ramp", variant: "ember", label: "Camp Day", span: "row-span-2" },
+  { art: "ramp", variant: "teal", label: "Camp Day", span: "row-span-2" },
 ] as const;
 
 export function Gallery() {

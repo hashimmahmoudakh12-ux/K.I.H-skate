@@ -33,7 +33,7 @@ export function Testimonials() {
               type="button"
               onClick={() => go(-1)}
               aria-label="Previous testimonial"
-              className="focus-ring flex h-11 w-11 items-center justify-center rounded-full border border-cream-100/15 text-cream-100 transition-colors hover:border-flame-500/50 hover:text-flame-500"
+              className="focus-ring flex h-11 w-11 items-center justify-center rounded-full border border-cream-100/15 text-cream-100 transition-colors hover:border-gold-500/50 hover:text-gold-500"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -41,7 +41,7 @@ export function Testimonials() {
               type="button"
               onClick={() => go(1)}
               aria-label="Next testimonial"
-              className="focus-ring flex h-11 w-11 items-center justify-center rounded-full border border-cream-100/15 text-cream-100 transition-colors hover:border-flame-500/50 hover:text-flame-500"
+              className="focus-ring flex h-11 w-11 items-center justify-center rounded-full border border-cream-100/15 text-cream-100 transition-colors hover:border-gold-500/50 hover:text-gold-500"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -60,7 +60,7 @@ export function Testimonials() {
               className="grid grid-cols-1 gap-10 rounded-3xl border border-cream-100/10 bg-white/[0.02] p-8 sm:p-12 lg:grid-cols-[auto,1fr]"
             >
               <div className="flex flex-row items-center gap-4 lg:flex-col lg:items-start">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-flame-500 to-flame-700 font-display text-xl font-bold text-ink-950">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-gold-500 to-gold-700 font-display text-xl font-bold text-ink-950">
                   {active.name
                     .split(" ")
                     .map((n) => n[0])
@@ -73,13 +73,13 @@ export function Testimonials() {
               </div>
 
               <div>
-                <Quote className="h-8 w-8 text-flame-500/40" />
+                <Quote className="h-8 w-8 text-gold-500/40" />
                 <p className="mt-4 text-xl leading-relaxed text-cream-100/85 sm:text-2xl">
                   &ldquo;{active.quote}&rdquo;
                 </p>
                 <div className="mt-6 flex gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-flame-500 text-flame-500" />
+                    <Star key={i} className="h-4 w-4 fill-gold-500 text-gold-500" />
                   ))}
                 </div>
               </div>
@@ -99,7 +99,7 @@ export function Testimonials() {
               }}
               className={cn(
                 "h-1.5 rounded-full transition-all duration-300",
-                i === index ? "w-8 bg-flame-500" : "w-1.5 bg-cream-100/20 hover:bg-cream-100/40"
+                i === index ? "w-8 bg-gold-500" : "w-1.5 bg-cream-100/20 hover:bg-cream-100/40"
               )}
             />
           ))}

@@ -1,17 +1,39 @@
 export const BRAND = {
   name: "K.I.H.",
-  full: "Keep It Handled Skate Co.",
+  full: "K.I.H. Skateboarding",
   tagline: "Skateboarding, taught right.",
   phone: "(555) 018-2947",
   email: "hello@kihskate.com",
   address: "Riverside Skate Park — Bay Area, CA",
 };
 
+export const INSTRUCTORS = [
+  {
+    name: "Khyree",
+    role: "Co-Founder & Coach",
+    bio: "Sets the pace on progression — the one who breaks tricks down into steps that actually click for beginners.",
+    initials: "K",
+  },
+  {
+    name: "Ismael",
+    role: "Co-Founder & Coach",
+    bio: "Runs the safety side of every session — spotter drills, gear checks, and the calm that keeps first-timers confident.",
+    initials: "I",
+  },
+  {
+    name: "Hashim",
+    role: "Co-Founder & Coach",
+    bio: "Brings the energy — camp games, challenges, and the hype that keeps kids coming back every week.",
+    initials: "H",
+  },
+] as const;
+
 export const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Lessons", href: "#lessons" },
   { label: "Camps", href: "#camps" },
   { label: "About", href: "#about" },
+  { label: "Coaches", href: "#instructors" },
   { label: "Gallery", href: "#gallery" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },

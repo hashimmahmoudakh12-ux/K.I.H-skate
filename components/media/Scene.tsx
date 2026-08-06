@@ -1,9 +1,9 @@
 "use client";
 
 const GRADIENTS: Record<string, string> = {
-  ember: "from-flame-600/40 via-ink-900 to-ink-950",
+  ember: "from-gold-600/45 via-ink-900 to-ink-950",
   dusk: "from-ink-700 via-ink-900 to-ink-950",
-  cream: "from-cream-200/20 via-ink-900 to-ink-950",
+  teal: "from-teal-600/45 via-ink-900 to-ink-950",
   deep: "from-ink-800 via-ink-900 to-black",
 };
 

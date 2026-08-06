@@ -35,7 +35,7 @@ export function Footer() {
                     key={social.label}
                     href={social.href}
                     aria-label={social.label}
-                    className="focus-ring flex h-10 w-10 items-center justify-center rounded-full border border-cream-100/10 text-cream-100/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-flame-500/50 hover:text-flame-500"
+                    className="focus-ring flex h-10 w-10 items-center justify-center rounded-full border border-cream-100/10 text-cream-100/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-500/50 hover:text-gold-500"
                   >
                     <Icon className="h-4 w-4" />
                   </a>
@@ -86,15 +86,15 @@ export function Footer() {
             </h3>
             <ul className="mt-5 space-y-3.5 text-sm text-cream-100/55">
               <li className="flex items-start gap-2.5">
-                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-flame-500" />
+                <Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
                 {BRAND.phone}
               </li>
               <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-flame-500" />
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
                 {BRAND.email}
               </li>
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-flame-500" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-500" />
                 {BRAND.address}
               </li>
             </ul>

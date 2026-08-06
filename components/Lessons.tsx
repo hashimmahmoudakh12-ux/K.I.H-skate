@@ -30,12 +30,12 @@ export function Lessons() {
                 className={cn(
                   "group relative flex h-full flex-col overflow-hidden rounded-3xl border p-8 transition-colors duration-300",
                   plan.featured
-                    ? "border-flame-500/50 bg-gradient-to-b from-flame-600/[0.12] to-ink-900 shadow-glow"
+                    ? "border-gold-500/50 bg-gradient-to-b from-gold-600/[0.12] to-ink-900 shadow-glow"
                     : "border-cream-100/10 bg-white/[0.02] hover:border-cream-100/25"
                 )}
               >
                 {plan.featured && (
-                  <span className="absolute right-6 top-6 rounded-full bg-flame-500 px-3 py-1 font-display text-[0.65rem] font-bold uppercase tracking-wide text-ink-950">
+                  <span className="absolute right-6 top-6 rounded-full bg-gold-500 px-3 py-1 font-display text-[0.65rem] font-bold uppercase tracking-wide text-ink-950">
                     Most Popular
                   </span>
                 )}
@@ -61,7 +61,7 @@ export function Lessons() {
                         className={cn(
                           "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
                           plan.featured
-                            ? "bg-flame-500 text-ink-950"
+                            ? "bg-gold-500 text-ink-950"
                             : "bg-cream-100/10 text-cream-100"
                         )}
                       >

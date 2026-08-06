@@ -23,7 +23,8 @@ export function Hero() {
       className="relative flex min-h-[100svh] items-center overflow-hidden bg-ink-950"
     >
       <motion.div style={{ y: bgY }} className="absolute inset-0 -top-24 h-[130%]">
-        <Scene variant="ember" art="carve" className="h-full w-full" />
+        <Scene variant="teal" art="carve" className="h-full w-full" />
+        <div className="absolute inset-0 bg-skateboards bg-repeat opacity-[0.12]" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/60 to-ink-950/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink-950/80 via-transparent to-ink-950/40" />
       </motion.div>
@@ -39,7 +40,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-cream-100/15 bg-white/[0.04] px-4 py-1.5 backdrop-blur-sm"
           >
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-flame-500" />
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-gold-500" />
             <span className="font-display text-xs font-semibold uppercase tracking-[0.25em] text-cream-100/70">
               Now Booking — Fall Sessions
             </span>
@@ -58,7 +59,7 @@ export function Hero() {
                   }}
                   className="block"
                 >
-                  {i === 1 ? <span className="text-flame-500">{line}</span> : line}
+                  {i === 1 ? <span className="text-gold-500">{line}</span> : line}
                 </motion.span>
               </span>
             ))}

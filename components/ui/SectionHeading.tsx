@@ -26,7 +26,7 @@ export function SectionHeading({
     >
       <Reveal>
         <span className="section-heading-eyebrow">
-          <span className="h-1.5 w-1.5 rounded-full bg-flame-500" />
+          <span className="h-1.5 w-1.5 rounded-full bg-gold-500" />
           {eyebrow}
         </span>
       </Reveal>

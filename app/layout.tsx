@@ -45,7 +45,8 @@ export const metadata: Metadata = {
       "Private, small group, and camp skateboarding lessons for kids and beginners.",
   },
   icons: {
-    icon: "/favicon.svg",
+    icon: "/brand/logo.png",
+    apple: "/brand/logo.png",
   },
 };
 
@@ -60,7 +61,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
-      <body className="bg-ink-950 font-sans text-cream-100 antialiased selection:bg-flame-500 selection:text-ink-950">
+      <body className="bg-ink-950 font-sans text-cream-100 antialiased selection:bg-gold-500 selection:text-ink-950">
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-cream-100 focus:px-5 focus:py-3 focus:text-ink-950 focus:outline-none"

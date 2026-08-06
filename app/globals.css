@@ -48,7 +48,7 @@ body {
 }
 
 .section-heading-eyebrow {
-  @apply inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-[0.3em] text-flame-500;
+  @apply inline-flex items-center gap-2 font-display text-xs font-semibold uppercase tracking-[0.3em] text-gold-500;
 }
 
 .btn-primary {
@@ -60,5 +60,5 @@ body {
 }
 
 .focus-ring {
-  @apply outline-none focus-visible:ring-2 focus-visible:ring-flame-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950;
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-gold-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950;
 }

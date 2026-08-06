@@ -8,7 +8,7 @@ import { BRAND, EXPERIENCE_LEVELS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const inputClasses =
-  "w-full rounded-2xl border border-cream-100/12 bg-white/[0.03] px-4 py-3.5 text-cream-50 placeholder:text-cream-100/35 transition-colors duration-200 focus:border-flame-500/60 focus:bg-white/[0.05] focus-ring";
+  "w-full rounded-2xl border border-cream-100/12 bg-white/[0.03] px-4 py-3.5 text-cream-50 placeholder:text-cream-100/35 transition-colors duration-200 focus:border-gold-500/60 focus:bg-white/[0.05] focus-ring";
 
 const labelClasses = "mb-2 block text-xs font-medium uppercase tracking-wide text-cream-100/50";
 
@@ -32,7 +32,7 @@ export function Contact() {
         <div>
           <Reveal>
             <span className="section-heading-eyebrow">
-              <span className="h-1.5 w-1.5 rounded-full bg-flame-500" />
+              <span className="h-1.5 w-1.5 rounded-full bg-gold-500" />
               Book Your Lesson
             </span>
           </Reveal>
@@ -56,7 +56,7 @@ export function Contact() {
                 { icon: MapPin, label: "Location", value: BRAND.address },
               ].map((row) => (
                 <div key={row.label} className="flex items-center gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-cream-100/10 bg-white/[0.03] text-flame-500">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-cream-100/10 bg-white/[0.03] text-gold-500">
                     <row.icon className="h-4 w-4" />
                   </div>
                   <div>
@@ -80,7 +80,7 @@ export function Contact() {
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 className="flex min-h-[380px] flex-col items-center justify-center text-center"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-flame-500/15 text-flame-500">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/15 text-gold-500">
                   <CheckCircle2 className="h-8 w-8" />
                 </div>
                 <h3 className="mt-6 font-display text-2xl font-semibold text-cream-50">

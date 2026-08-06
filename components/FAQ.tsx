@@ -40,7 +40,7 @@ export function FAQ() {
                     <span
                       className={cn(
                         "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-cream-100/15 text-cream-100 transition-all duration-300 ease-premium",
-                        isOpen && "rotate-45 border-flame-500/50 bg-flame-500/10 text-flame-500"
+                        isOpen && "rotate-45 border-gold-500/50 bg-gold-500/10 text-gold-500"
                       )}
                     >
                       <Plus className="h-4 w-4" />

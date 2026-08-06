@@ -19,7 +19,7 @@ export function About() {
               transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="absolute -bottom-6 -right-6 hidden w-56 rounded-3xl border border-cream-100/10 bg-ink-950/90 p-5 shadow-premium backdrop-blur-xl sm:block"
             >
-              <p className="font-display text-3xl font-bold text-flame-500">10+</p>
+              <p className="font-display text-3xl font-bold text-gold-500">10+</p>
               <p className="mt-1 text-sm text-cream-100/60">
                 years coaching every level, from first push to first competition.
               </p>
@@ -30,7 +30,7 @@ export function About() {
         <div>
           <Reveal>
             <span className="section-heading-eyebrow">
-              <span className="h-1.5 w-1.5 rounded-full bg-flame-500" />
+              <span className="h-1.5 w-1.5 rounded-full bg-gold-500" />
               About K.I.H.
             </span>
           </Reveal>

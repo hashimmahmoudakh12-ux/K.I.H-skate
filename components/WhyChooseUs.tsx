@@ -44,11 +44,11 @@ export function WhyChooseUs() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="group relative h-full overflow-hidden rounded-3xl border border-cream-100/10 bg-white/[0.02] p-8 transition-colors duration-300 hover:border-flame-500/40 hover:bg-white/[0.04]"
+                  className="group relative h-full overflow-hidden rounded-3xl border border-cream-100/10 bg-white/[0.02] p-8 transition-colors duration-300 hover:border-gold-500/40 hover:bg-white/[0.04]"
                 >
-                  <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-flame-500/0 blur-3xl transition-colors duration-500 group-hover:bg-flame-500/20" />
+                  <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold-500/0 blur-3xl transition-colors duration-500 group-hover:bg-gold-500/20" />
 
-                  <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-cream-100/10 bg-ink-900 text-flame-500 transition-all duration-300 group-hover:scale-110 group-hover:border-flame-500/40">
+                  <div className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-cream-100/10 bg-ink-900 text-gold-500 transition-all duration-300 group-hover:scale-110 group-hover:border-gold-500/40">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>
 

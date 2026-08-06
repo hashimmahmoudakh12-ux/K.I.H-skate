@@ -27,11 +27,11 @@ export function PageLoader() {
           >
             <div className="relative flex h-14 w-14 items-center justify-center rounded-full border border-cream-100/15">
               <motion.span
-                className="absolute inset-0 rounded-full border-t-2 border-flame-500"
+                className="absolute inset-0 rounded-full border-t-2 border-gold-500"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
               />
-              <span className="h-2 w-2 rounded-full bg-flame-500" />
+              <span className="h-2 w-2 rounded-full bg-gold-500" />
             </div>
             <p className="font-display text-xs uppercase tracking-[0.35em] text-cream-100/50">
               K.I.H.
