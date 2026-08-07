@@ -43,6 +43,9 @@
       <a href="#book" class="nav-link" data-nav="contact">CONTACT
         <svg class="underline-svg" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 20 4, 35 12, 50 7 S 80 3, 98 8" /></svg>
       </a>
+      <a href="signin.html" class="nav-link" data-nav="signin">SIGN IN
+        <svg class="underline-svg" viewBox="0 0 100 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 20 4, 35 12, 50 7 S 80 3, 98 8" /></svg>
+      </a>
     </nav>
   </div>
 </header>
@@ -242,17 +245,13 @@
       <h2 class="section-heading light">BOOK ME.</h2>
       <p class="book-subheading">Lessons, sessions, appearances, collabs. Fill this out and I'll hit you back.</p>
 
-      <!-- Booking requests are emailed to kihskateboarding@gmail.com via
-           FormSubmit (no account needed). The FIRST real submission
-           triggers a one-time confirmation email to that inbox — someone
-           has to click "Confirm" there before submissions start arriving,
-           it's FormSubmit's spam-prevention step, not a bug. script.js
-           submits this via fetch so we can show a real success/error
-           state instead of redirecting to FormSubmit's own page. -->
-      <form class="notebook-form" action="https://formsubmit.co/kihskateboarding@gmail.com" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="New KIH Skateboarding booking request" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+      <!-- No third-party form service — submitting opens the visitor's own
+           email app with a pre-filled message addressed straight to
+           kihskateboarding@gmail.com (see script.js). That means it works
+           with zero setup and no confirmation-email gate, but it does need
+           the visitor to have a mail app configured on whatever device
+           they're on, and they have to hit send themselves. -->
+      <form class="notebook-form" id="book-form" novalidate>
         <svg class="torn-edge" viewBox="0 0 600 24" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0 24 L0 10 L20 18 L40 4 L62 16 L86 2 L110 14 L136 6 L160 18 L184 4 L208 16 L232 2 L256 14 L280 6 L304 18 L328 4 L352 16 L376 2 L400 14 L424 6 L448 18 L472 4 L496 16 L520 2 L544 14 L568 6 L592 18 L600 12 L600 24 Z" />
         </svg>
@@ -295,13 +294,11 @@
             SEND IT
             <svg class="arrow-svg" viewBox="0 0 30 20" aria-hidden="true"><path d="M1 10 H27 M18 2 L27 10 L18 18" /></svg>
           </button>
-
-          <p class="form-status" role="status" aria-live="polite" hidden></p>
         </div>
 
         <div class="form-success" hidden>
-          <p class="form-success-heading">SENT IT!</p>
-          <p>We'll hit you back soon.</p>
+          <p class="form-success-heading">ALMOST THERE!</p>
+          <p>Your email app should be open with everything filled in — just hit send.</p>
         </div>
       </form>
     </div>
