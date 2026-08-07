@@ -10,5 +10,5 @@
 // TODO: replace these two values with your real project's — find them in
 // the Supabase dashboard under Project Settings → API.
 
-export const SUPABASE_URL = "YOUR_SUPABASE_URL";
-export const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+export const SUPABASE_URL = "https://fwdxekcdaoslizmxngni.supabase.co";
+export const SUPABASE_ANON_KEY = "sb_publishable_I00P53Pj0lRK6VAqs13r7g_WX7PoN44";
