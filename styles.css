@@ -164,6 +164,12 @@ h1, h2, h3 {
   box-shadow: var(--shadow-flat);
 }
 
+.btn-teal {
+  background: var(--teal);
+  color: var(--cream);
+  box-shadow: var(--shadow-flat);
+}
+
 .btn:hover,
 .btn:focus-visible {
   animation: wobble 0.4s ease-in-out;
@@ -516,10 +522,18 @@ h1, h2, h3 {
   gap: 18px;
 }
 
+.instructor-cta-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin: 0 auto;
+}
+
 .instructor-cta {
   display: flex;
   max-width: 320px;
-  margin: 0 auto;
+  margin: 0;
   justify-content: center;
 }
 
@@ -780,6 +794,10 @@ h1, h2, h3 {
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+  }
+
+  .instructor-cta-row {
+    flex-direction: row;
   }
 
   .offer-cards {
