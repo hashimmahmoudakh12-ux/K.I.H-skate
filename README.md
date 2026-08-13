@@ -13,31 +13,6 @@ Plain HTML/CSS/JS. No frameworks, no build step.
 - `kih-logo.png` — circular sticker logo
 - `kih-mascot.png` — transparent mascot
 - `khyree.jpg`, `ismael.jpg`, `hashim.jpg` — real instructor photos
-- `signin.html` / `signin.js` — sign in, sign up, forgot/reset password
-- `dashboard.html` / `dashboard.js` — student dashboard (lessons, tuition, messages)
-- `instructor.html` / `instructor.js` — instructor dashboard (schedule, roster, messages)
-- `config.js` — Supabase URL + public anon key (see Accounts below)
-- `supabase-client.js`, `auth.js`, `messages.js`, `profiles.js` — shared
-  helpers imported by the pages above
-- `supabase-schema.sql` — paste into the Supabase SQL editor once, sets up
-  tables + Row Level Security
-- `api/create-checkout-session.js`, `api/create-portal-session.js` — Vercel
-  serverless functions for Stripe (dependency-free, plain `fetch`)
-
-## Accounts (Supabase + Stripe)
-
-See the PR description for the full setup checklist — SQL to run, env vars
-to add in Vercel, and which Stripe objects to create. Short version:
-
-1. Create a free [Supabase](https://supabase.com) project, run
-   `supabase-schema.sql` in its SQL editor, then put its URL + anon key in
-   `config.js`.
-2. In Vercel's project settings, add `SUPABASE_URL`, `SUPABASE_ANON_KEY`,
-   `SUPABASE_SERVICE_ROLE_KEY`, `STRIPE_SECRET_KEY`, and `STRIPE_PRICE_ID`
-   as environment variables (server-side only — never put the service role
-   key or Stripe secret key in a client-side file).
-3. Create one recurring Stripe Price for lessons and set its id as
-   `STRIPE_PRICE_ID`.
 
 ## Before you ship
 
